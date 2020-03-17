@@ -3,17 +3,15 @@ import java.util.Random;
 
 public class Racing {
 
-    public static int[] run(int[] carPositions, int trying) {
+    public static void run(int[] carPositions, int trying) {
         Random random = new Random();
 
         for(int i=0; i<carPositions.length; i++) {
-            carPositions[i] = 1;
             for (int chance = 0; chance < trying; chance++){
                 if(random.nextInt(10) >= 4)
                     carPositions[i]++;
             }
         }
-        return carPositions;
     }
 
     public static void main(String[] args) {
@@ -24,6 +22,7 @@ public class Racing {
         System.out.println("자동차 대수는 몇 대 인가요?");
         car = sc.nextInt();
         int[] carPositions = new int[car];
+        //배열 초기화 상태로 생성(모든 자동차들 초기 위치 0)
 
         System.out.println("시도할 회수는 몇 회 인가요?");
         trying = sc.nextInt();
