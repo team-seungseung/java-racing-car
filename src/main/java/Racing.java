@@ -1,8 +1,6 @@
-import jdk.internal.dynalink.linker.LinkerServices;
-
 import java.util.LinkedList;
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Racing {
 
